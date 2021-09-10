@@ -20,3 +20,12 @@ class Solution:
             return False
 
 print(Solution().containsDuplicate([1,2,3,4]))
+
+test = ['a', 'b', 'c']
+test1 = ['d', 'b', 'e']
+
+for i in test:
+    if i in test1:
+        del test[test.index(i)]
+
+print(test)
