@@ -1,3 +1,4 @@
+#How to iterate without using loops.
 def recur(n):
     if n == 0:
         return 
