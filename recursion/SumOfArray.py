@@ -1,3 +1,4 @@
+
 #Sum(n,a)-->How to calculate the sum of an array still nth elements
 
 def sumArray(n,a):
@@ -6,3 +7,6 @@ def sumArray(n,a):
     return a[n]+sumArray(n-1,a)
 
 print(sumArray(2,[1,5,6,7,8]))
+
+
+
