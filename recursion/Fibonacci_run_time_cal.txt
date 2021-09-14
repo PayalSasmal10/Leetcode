@@ -1,0 +1,20 @@
+T(n) = T(n-1)+T(n-2)+O(1)+O(1)+O(1)+O(1)
+     = T(n-1)+T(n-2)+C [ let's assume C is equal to 4 of O(1)]
+     = 2T(n-1)+C [ let's approximate T(n-1) ~ T(n-2), so T(n-2)=T(n-1) , 
+                   T(n-2)<= T(n-1) for upper bound]---(i)
+     = 2*[2T(n-1-1)+C] + C [put n=n-1 in the equation (i) into the equation (i)]
+     = 2 *(2T(n-2)+C) +C 
+     = 4T(n-2)+3C
+     = 4* [2T(n-1-2)+ 3C] + 3C [same way put n= n-1 in eq (i) into the equation(i)]
+     = 8T(n-3) + 7C
+     .
+     .
+     .
+     = 2^k(n-k)+(2^k-1)*C
+
+T(n) = 2^n T(n-n) + (2^n -1)*C  [ n-k=0, i.e k = n]
+     = 2^n (1+C) -C
+     ~ 2^n i.e O(2^n)
+
+
+
