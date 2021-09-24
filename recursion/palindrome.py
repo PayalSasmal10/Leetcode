@@ -12,9 +12,9 @@ def palindrome(strng):
         else:
             return False
 
-if palindrome("MOM") == True:
+if palindrome("Twitter") == True:
     print("This is Palindrome")
-
 else:
     print("This is not Palindrome")
+
 
