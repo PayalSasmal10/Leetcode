@@ -15,5 +15,4 @@ node1 = Node(1)
 slinkedlist = SLinkedList()
 
 slinkedlist.head = node1
-slinkedlist.head.next = node1
 slinkedlist.tail = node1
