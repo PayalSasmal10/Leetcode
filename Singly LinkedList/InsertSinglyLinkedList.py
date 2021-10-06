@@ -11,11 +11,12 @@ class InsertSLinkedList:
         self.head=None
         self.tail=None
 
-
-node1 = Node(10)
-node2 = Node(20)
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node
+            
 
 insersLinkedList = InsertSLinkedList()
 insersLinkedList.head = node1
-insersLinkedList.node.next = node2
 insersLinkedList.tail = node2
