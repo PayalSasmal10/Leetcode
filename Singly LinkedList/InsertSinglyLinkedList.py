@@ -16,6 +16,7 @@ class InsertSLinkedList:
         while node:
             yield node
             node = node.next
+    
     def insertList(self, value, location):
         newNode = Node(value)
         if self.head is None:
@@ -27,25 +28,29 @@ class InsertSLinkedList:
                 self.head = newNode
             elif location == 1:
                 newNode.next = None
+                self.tail.next = newNode
                 self.tail = newNode
             else:
                 tempNode = self.head
-                index=0
-                while index < location-1:
+                index = 0
+                while index < location - 1:
                     tempNode = tempNode.next
                     index += 1
+                
                 nextNode = tempNode.next
                 tempNode.next = newNode
                 newNode.next = nextNode
 
+                if tempNode == self.tail:
+                    self.tail = newNode
 
             
 
 insersLinkedList = InsertSLinkedList()
 insersLinkedList.insertList(2,1)
-insersLinkedList.insertList(3,2)
-insersLinkedList.insertList(4,3)
-insersLinkedList.insertList(5,4)
+insersLinkedList.insertList(3,1)
+insersLinkedList.insertList(4,1)
+insersLinkedList.insertList(5,1)
 
 
 print([node.value for node in insersLinkedList])
