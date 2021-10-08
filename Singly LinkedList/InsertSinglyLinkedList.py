@@ -51,6 +51,8 @@ insersLinkedList.insertList(2,1)
 insersLinkedList.insertList(3,1)
 insersLinkedList.insertList(4,1)
 insersLinkedList.insertList(5,1)
+insersLinkedList.insertList(6,0)
+insersLinkedList.insertList(7,3)
 
 
 print([node.value for node in insersLinkedList])
