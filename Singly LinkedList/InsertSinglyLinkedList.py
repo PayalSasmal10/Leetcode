@@ -11,20 +11,41 @@ class InsertSLinkedList:
         self.head=None
         self.tail=None
 
-    def insertList(self, prv, value, location):
+    def __iter__(self):
+        node = self.head
+        while node:
+            yield node
+            node = node.next
+    def insertList(self, value, location):
         newNode = Node(value)
-        if location == 0:
-            newNode.next = self.head
+        if self.head is None:
             self.head = newNode
-        elif location == -1:
-            newNode.next = None
             self.tail = newNode
         else:
-            newNode.next = prv.next
-            
+            if location == 0:
+                newNode.next = self.head
+                self.head = newNode
+            elif location == 1:
+                newNode.next = None
+                self.tail = newNode
+            else:
+                tempNode = self.head
+                index=0
+                while index < location-1:
+                    tempNode = tempNode.next
+                    index += 1
+                nextNode = tempNode.next
+                tempNode.next = newNode
+                newNode.next = nextNode
+
 
             
 
 insersLinkedList = InsertSLinkedList()
-insersLinkedList.head = node1
-insersLinkedList.tail = node2
+insersLinkedList.insertList(2,1)
+insersLinkedList.insertList(3,2)
+insersLinkedList.insertList(4,3)
+insersLinkedList.insertList(5,4)
+
+
+print([node.value for node in insersLinkedList])
