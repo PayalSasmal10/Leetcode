@@ -11,10 +11,18 @@ class InsertSLinkedList:
         self.head=None
         self.tail=None
 
-    def __iter__(self):
-        node = self.head
-        while node:
-            yield node
+    def insertList(self, prv, value, location):
+        newNode = Node(value)
+        if location == 0:
+            newNode.next = self.head
+            self.head = newNode
+        elif location == -1:
+            newNode.next = None
+            self.tail = newNode
+        else:
+            newNode.next = prv.next
+            
+
             
 
 insersLinkedList = InsertSLinkedList()
