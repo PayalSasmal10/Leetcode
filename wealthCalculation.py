@@ -2,6 +2,7 @@
 teswt = [[1,2,3],[4,5,6]]
 maxx = 0
 for i in teswt:
+    print(i)
     maxx = max(maxx,sum(i))
 print(maxx)
 
