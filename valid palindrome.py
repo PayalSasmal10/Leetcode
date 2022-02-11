@@ -1,8 +1,6 @@
 #https://leetcode.com/problems/valid-palindrome/
 
-from string import digits
-
-
+# 1st way using isalnum() method
 class Solution:
     def isPalindrome(s: str) -> bool:
         str1 = ""
@@ -11,7 +9,7 @@ class Solution:
             if i.isalnum():
                 str1 = i + str1
             
-            if i.isalpha() or i.isdigit():
+            if i.isalnum():
                 str2 += i
         print(str1)
         print(str2)
