@@ -29,3 +29,12 @@ class Solution2:
 
 s2 = Solution2
 print(s2.singleNumber2([0,1,0,1,0,1,99]))
+
+
+class Solution3:
+    def singleNumber3(nums) -> int:
+
+        return((((sum(list(set(nums))))*3)-(sum(nums)))//2)
+
+s3 = Solution3
+print(s3.singleNumber3([2,2,3,2]))
