@@ -7,3 +7,6 @@ class Solution:
         for i in convert_to_list:
             newlist.append(i[::-1])
         return ' '.join(newlist)
+
+s = Solution()
+print(s.reverseWords("Let's leetcode it"))
