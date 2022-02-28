@@ -30,4 +30,4 @@ class Solution1:
         
 
 s1 = Solution1()
-print(s.maxArea([1,8,6,2,5,4,8,3,7]))
+print(s1.maxArea([4,2,0,3,2,5]))
