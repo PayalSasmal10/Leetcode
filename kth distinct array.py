@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/kth-distinct-string-in-an-array/submissions/
 
 class Solution:
-    def kthDistinct(self, arr: List[str], k: int) -> str:
+    def kthDistinct(self, arr, k: int) -> str:
         dictt = {}
         
         for i in range(len(arr)):
