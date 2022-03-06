@@ -19,5 +19,22 @@ def fibonacci1(n,dp):
     return dp[n]
 
 dp = [None] *101
-print(fibonacci1(4,dp))
+print(fibonacci1(50,dp))
+
+# Bottom top approach - time complexity o(n)
+
+def fibonacci2(n):
+    
+    dp[0] = 0
+    dp[1] = 1
+
+    for i in range(2,n):
+        dp[n] = dp[n-1] + dp[n-2]
+
+    return dp[n]
+
+print(fibonacci2(50))
+
+
+
 
