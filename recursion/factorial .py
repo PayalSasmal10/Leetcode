@@ -15,7 +15,7 @@ print(s.fact(5))
 
 
 #factorial with recursion 
-
+# O(n) time complexity
 class solution1:
     def fact1(self, n):
         if n < 2:
