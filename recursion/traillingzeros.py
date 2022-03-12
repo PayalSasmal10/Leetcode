@@ -19,3 +19,19 @@ class Solution:
 
 s = Solution()
 print(s.trailingZeroes(10))
+
+# o(n) solution for all kind of bigger factorial
+
+class Solution1:                
+    def trailingZeroes1(self, n: int) -> int:
+        ans = 0
+        while(n>=5):
+            n //= 5
+            ans += n
+        
+        return ans
+
+s1 = Solution1()
+print(s1.trailingZeroes1(50))
+
+        
