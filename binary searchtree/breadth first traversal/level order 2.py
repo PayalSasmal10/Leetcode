@@ -40,12 +40,7 @@ class Node:
                     queue.append(node.right)
                 
             result.append(new_list)
-        j = len(result)-1
-        print(len(result[j]))      
-        for k in range(len(result[j])):
-            summ += result[j][k]
-
-        return summ
+        return result[::-1]
             
 
         
