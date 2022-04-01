@@ -1,12 +1,3 @@
-def rec(n):
-    if n == 0:
-        return n
-    else:
-        rec(n-1)
-        print(n)
-
-rec(5)
-
 class Solution:
         
     def cal_permute(self,index,nums,output):
@@ -28,3 +19,4 @@ nums = [1,2,3]
 output = []
 s = Solution()
 print(s.cal_permute(0,nums,output)) 
+
