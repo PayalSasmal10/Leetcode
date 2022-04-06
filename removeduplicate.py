@@ -22,3 +22,25 @@ class Solution:
 
 s = Solution
 print(s.removeDuplicates([1,1,1,1]))
+
+print("----------------------------second solution started-------------------")
+# 2nd way
+
+class Solution1:
+    def removeDuplicates(self,nums):
+        i = 0
+        j = 1
+        size = len(nums)
+        while(j<size):
+            if nums[i] == nums[j]:
+                j += 1
+            else:
+                i += 1
+                nums[i] = nums[j]
+        return nums
+
+
+nums = [0,0,1,1,1,2,2,3,3,4]
+s1 = Solution1()
+print(s1.removeDuplicates(nums))
+
