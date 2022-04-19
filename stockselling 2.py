@@ -7,8 +7,7 @@ class Solution:
         for i in range(len(prices)):
             if current_value < prices[i]:
                 profit += prices[i]-current_value
-
-            current_value = prices[i]
+                current_value = prices[i]
                 
         return profit
         

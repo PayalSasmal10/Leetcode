@@ -1,20 +1,20 @@
 #https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 test = [1,1,1,1]
-for j in range(1):
+
+for j in range(test):
     print(j)
+    print
 
 print("...................................")
 
 class Solution:
     def removeDuplicates(nums):
-        print("length=", len(nums))
-        print("before for........................")
         countt = 0
         while countt != len(nums):
-            print("length=",len(nums))
             # print(nums.count(nums[i]))
             if (nums.count(nums[countt]) != 1):
                 nums.remove(nums[countt])
+                print(nums)
             
             else:
                 countt += 1

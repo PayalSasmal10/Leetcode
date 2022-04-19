@@ -24,14 +24,14 @@ print(fibonacci1(50,dp))
 # Bottom top approach - time complexity o(n)
 
 def fibonacci2(n):
-    
-    dp[0] = 0
-    dp[1] = 1
+    dp1 = [0]*(n+1)
+    dp1[0] = 0
+    dp1[1] = 1
 
     for i in range(2,n):
-        dp[n] = dp[n-1] + dp[n-2]
+        dp1[i] = dp1[i-1] + dp1[n-2]
 
-    return dp[n]
+    return dp1[n]
 
 print(fibonacci2(50))
 

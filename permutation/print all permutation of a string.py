@@ -10,19 +10,14 @@ CBA
 CAB
 """
 
-from multiprocessing.connection import answer_challenge
-
-
 class permu:
     ans = []
     def permutationss(self,strr,answer):
         
         if len(strr) == 0:
-            print(answer)
             self.ans.append([int(j) for j in answer])
-            print(self.ans)
             return 
-        
+    
         for i in range(len(strr)):
             cur_val = strr[i]
             left_subset = strr[0:i]
@@ -32,7 +27,7 @@ class permu:
         
         
 
-strr = [1,-2,3]
+strr = [1,2,3]
 answer = ""
 p = permu()
 p.permutationss(strr,answer)
