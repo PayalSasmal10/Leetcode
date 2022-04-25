@@ -1,3 +1,12 @@
+# Maximum Sum Subarray of size K
+"""
+Flow:
+    1. Problem Statement - IP/OP
+    2. Identification
+    3. Abstract
+    4. Code
+"""
+
 # o(n^2) time complexity
 class subArrays:
     def sub_array(self,strings, k=3):
