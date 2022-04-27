@@ -27,19 +27,33 @@ a = A1()
 print(a.subarray(arr,k))
 
 
+print("..........................................")
 
-
+arr = [3, 2, 1, 5]
 class A:
-    def subArrays(arr, k):
+    def subArrays(self,arr, k):
         i = j = 0
         output = []
         max_val = arr[0]
         while(j<len(arr)):
             if arr[j] >= max_val:
-                output.append(arr[j])
-                max_val = arr[j]
+                max_val = max(arr[j], max_val)
+                
             
             if j-i+1 < k:
                 j += 1
             
             elif j-i+1 == k:
+                if arr[j] > arr[i]:
+                    max_val = max(max_val, arr[j])
+                output.append(max_val)
+                i += 1
+                j += 1
+        return output
+
+
+a = A()
+print(a.subArrays(arr,k))
+
+                
+
